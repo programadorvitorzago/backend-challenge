@@ -1,1 +1,18 @@
-teste
+def writeFile(localPath, objectKey, fileContent):
+    fullPath = f"{localPath}/{objectKey}"
+    directory_path = os.path.dirname(fullPath)
+    os.makedirs(directory_path, exist_ok=True)
+    if os.path.exists(fullPath):
+        os.remove(fullPath)
+    with open(fullPath, 'x') as file:
+        file.write(fileContent)
+
+def downloadFile(bucketName, objectKey):
+    bucket = getBucket(bucketName)
+    fullPath = f"{bucket.localPath}/{objectKey}"
+    with open(fullPath, 'r') as file:
+        return file.read()
+
+def uploadFile(bucketName, filePath, fileContent):
+    bucket = getBucket(bucketName)
+    writeFile(bucket.localPath, filePath, fileContent)
