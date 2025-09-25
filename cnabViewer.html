@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+    <head>
+        <script type="text/javascript">
+
+            var cnabSpec = {
+                linhaTipoList: [
+                    { 
+                        id: "CAB_ARQ",
+                        nome: 'Cabeçalho de Arquivo',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '0'
+                            }
+                        ],
+                        campoList: [
+                            { 
+                                id: 1,
+                                nome: 'Banco',
+                                descricao: '',
+                                descricaoDetalhada: 'Número do banco',
+                                posicional: { 
+                                    ini: 1,
+                                    fim: 3,
+                                },
+                                classe: 'campo01',
+                                destaque: {
+                                    color: "#2F4F4F",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 2,
+                                nome: 'Lote',
+                                descricao: '',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 4,
+                                    fim: 7,
+                                },
+                                classe: 'campo02',
+                                destaque: {
+                                    color: "#E9967A",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 3,
+                                nome: 'TipoLinha',
+                                descricao: '',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 8,
+                                    fim: 8,
+                                },
+                                classe: 'campo03',
+                                destaque: {
+                                    color: "#E9967A",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 4,
+                                nome: 'TESTE',
+                                descricao: '',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 9,
+                                    fim: 72,
+                                },
+                                classe: 'campo03',
+                                destaque: {
+                                    color: "",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 5,
+                                nome: 'Nome empresa',
+                                descricao: 'Nome do Cliente',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 73,
+                                    fim: 103,
+                                },
+                                classe: 'campo03',
+                                destaque: {
+                                    color: "yellow"
+                                }
+                            }
+                        ]
+                    },
+                    { 
+                        id: "CAB_LOTE",
+                        nome: 'Cabeçalho de Lote',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '1'
+                            }
+                        ],
+                        campoList: [
+                            { 
+                                id: 1,
+                                nome: 'Banco',
+                                descricao: '',
+                                descricaoDetalhada: 'Número do banco',
+                                posicional: { 
+                                    ini: 1,
+                                    fim: 3,
+                                },
+                                classe: 'campo01',
+                                destaque: {
+                                    color: "#2F4F4F",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 2,
+                                nome: 'Lote',
+                                descricao: 'NUM lote',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 4,
+                                    fim: 7,
+                                },
+                                classe: 'campo02',
+                                destaque: {
+                                    color: "#E9967A",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 3,
+                                nome: 'TipoLinha',
+                                descricao: '',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 8,
+                                    fim: 8,
+                                },
+                                classe: 'campo03',
+                                destaque: {
+                                    color: "#E1468A",
+                                    border: "",
+                                }
+                            }
+                        ]
+                    },
+                    { 
+                        id: "ROD_LOTE",
+                        nome: 'Cabeçalho de Lote',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '5'
+                            }
+                        ],
+                        campoList: [
+                            { 
+                                id: 1,
+                                nome: 'Banco',
+                                descricao: '',
+                                descricaoDetalhada: 'Número do banco',
+                                posicional: { 
+                                    ini: 1,
+                                    fim: 3,
+                                },
+                                classe: 'campo01',
+                                destaque: {
+                                    color: "#2F4F4F",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 2,
+                                nome: 'Lote',
+                                descricao: 'NUM lote',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 4,
+                                    fim: 7,
+                                },
+                                classe: 'campo02',
+                                destaque: {
+                                    color: "#E9967A",
+                                    border: "",
+                                }
+                            },
+                            { 
+                                id: 3,
+                                nome: 'TipoLinha',
+                                descricao: '',
+                                descricaoDetalhada: '',
+                                posicional: { 
+                                    ini: 8,
+                                    fim: 8,
+                                },
+                                classe: 'campo03',
+                                destaque: {
+                                    color: "#E1468A",
+                                    border: "",
+                                }
+                            }
+                        ]
+                    }
+                ],
+
+                blocoTipoList: {
+                        id: "BLOCO_LOTE",
+                        nome: 'Cabeçalho de Arquivo',
+                        idLinhaIni: "CAB_LOTE",
+                        idLinhaFim: "ROD_LOTE",
+                        destaque: {
+                            border: "1px solid blue",
+                        }
+                    }
+            }
+
+            function parseCNAB() {
+                console.log("Processando CNAB ...")
+                var cnabInput = document.getElementById("cnabInput");
+                montagem(cnabInput.value);
+
+                var inputDiv = document.getElementById("input");
+                inputDiv.hidden = true;
+                var outputDiv = document.getElementById("output");
+                outputDiv.hidden = false;
+                
+                // var cnabInput = document.getElementById("invisible");
+                // montagem(cnabInput.innerText);
+            }
+
+            function montagem(textoCnab) {
+                var outputDivElm = document.getElementById("output");
+                var lines = textoCnab.split('\n');
+
+                // MLHORAR ISSO HEIN
+                var blocoSpec = cnabSpec.blocoTipoList;
+
+                var blocoInit = false;
+                var blocoElm = null;
+
+                for (var i = 0; i < lines.length; i++) {
+                    var tamLinha = 240;
+                    lines[i] = lines[i].replace(/\r/g, ''); // remove carriage return if present
+                    if (lines[i].trim() === '') {
+                        continue; // skip empty lines
+                    }
+
+                    var divElm = document.createElement('div');
+                    divElm.className = 'cnabLine';
+                    
+                    if( lines[i].length < tamLinha) {
+                        lines[i] = lines[i].padEnd(tamLinha, ' ');
+                    }
+
+                    var line = lines[i];
+
+                    // Indetificar Linha
+                    var linhaTipo = getLinhaTipo(line);
+                    if (linhaTipo != null) {
+                        divElm.className = divElm.className + ' ' + linhaTipo.id;
+
+                        // Iterar campos
+                        var indexFim = 0;
+                        for(var campoIndex in linhaTipo.campoList){
+                            var campo = linhaTipo.campoList[campoIndex];
+                            
+                            var valorCampo = getValorCampo(line, campo.posicional)
+                            console.log("Valor: " + valorCampo)
+                            
+                            var spanCampo = document.createElement('span');
+                            spanCampo.className = campo.classe;
+                            spanCampo.innerText = valorCampo;
+                            
+                            // def string de destaque e Dica
+                            spanCampo.style = getStringDestaque(campo.destaque);
+                            spanCampo.title = getDicaCampo(campo);
+                            
+                            divElm.appendChild(spanCampo);
+
+                            indexFim = campo.posicional.fim;
+                        }
+                        // Restante
+                        if (indexFim < tamLinha) {
+                            var spanCampo = document.createElement('span');
+                            spanCampo.className = "restante";
+                            spanCampo.innerText = line.substring(indexFim, tamLinha);
+                            divElm.appendChild(spanCampo);
+                        }
+                    }
+                    else {
+                        console.log('Tipo de linha não identificado: ' + line);
+                        var spanCompleto = document.createElement('span');
+                        spanCompleto.className = 'semIdentificacao';
+                        spanCompleto.textContent = line;
+                        divElm.appendChild(spanCompleto);
+                    }
+
+                    var elmAppender = outputDivElm;
+                    if(blocoSpec) {
+                        if(blocoInit) {
+                            // verificar se tem que FECHAR
+                            if(linhaTipo && blocoSpec.idLinhaFim == linhaTipo.id) {
+                                console.log("Fechando bloco!");
+                                blocoInit = false;
+                                elmAppender = blocoElm;
+                            }
+                            else
+                            {
+                                // mantem no bloco
+                                elmAppender = blocoElm;
+                            }
+
+                        }
+                        else
+                        {
+                            // verificar se tem que abrir
+                            if(linhaTipo && blocoSpec.idLinhaIni == linhaTipo.id) {
+                                console.log("Abrindo bloco ...");
+                                blocoInit = true;
+
+                                var blockDivElm = document.createElement('div');
+                                blockDivElm.className = 'cnabBloco';
+                                blockDivElm.style = getStringDestaque(blocoSpec.destaque)
+                                blocoElm = blockDivElm;
+                                outputDivElm.appendChild(blockDivElm)
+                                elmAppender = blocoElm;
+                            }
+                        }
+                    }
+                    elmAppender.appendChild(divElm);
+                }
+            }
+
+            function getLinhaTipo(linha) {
+                for (var i = 0; i < cnabSpec.linhaTipoList.length; i++) {
+                    var linhaTipo = cnabSpec.linhaTipoList[i];
+                    var match = true;
+
+                    for (var j = 0; j < linhaTipo.identificacao.length; j++) {
+                        var criterio = linhaTipo.identificacao[j];
+                        var valorCampoCriterio = getValorCampo(linha, criterio);
+                        var resultTesteCriterio = valorCampoCriterio == criterio.valor;
+                        match = match && resultTesteCriterio;
+                    }
+                    if (match) {
+                        return linhaTipo;
+                    }
+                }
+                return null;
+            }
+
+            function getValorCampo(linha, identificacao) {
+                return linha.substring(identificacao.ini - 1, identificacao.fim);
+            }
+
+            function getDicaCampo(campo) {
+                if (campo.descricaoDetalhada) {
+                    return campo.descricaoDetalhada;
+                }
+                if (campo.descricao) {
+                    return campo.descricao;
+                }
+                return campo.nome;
+            }
+       
+            function getStringDestaque(destaque) {
+                if(destaque) {
+                    var stringStyle = "";
+                    if(destaque.color)
+                    {
+                        stringStyle += `background-color: ${destaque.color};`;
+                    }
+                    if(destaque.border)
+                    {
+                        stringStyle += `border: ${destaque.border};`;
+                    }
+                    return stringStyle;
+                }
+                return "";
+            }
+        </script>
+        <style type="text/css"> 
+            .cabecalho {
+                text-align: center;
+            }
+
+            #output {
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 7px;
+
+                font-family: Consolas;
+                width: fit-content;
+            
+                span:hover {
+                    font-weight: bold;
+                }
+            }
+
+            .cnabLine {
+                display: block;
+                white-space: pre;
+            }
+        </style>
+
+    </head>
+    <body> 
+        <div id="main" class="cabecalho">
+            <h1>Visualizador de CNAB</h1>
+        </div>
+
+        <div id="input" class="start">
+            <label for="cnab">Insira o CNAB no textArea abaixo</label><br />
+            <textarea id="cnabInput" rows="20" cols="80"></textarea><br />
+            <button onclick="javascript:parseCNAB()">OK</button>
+        </div>
+
+        <div id="output" class="start" hidden="hidden">
+        </div>
+
+        <div id="invisible-testeArea" hidden="hidden">
+        </div>
+
+    </body>
+
+
+
+
+
+</html>
