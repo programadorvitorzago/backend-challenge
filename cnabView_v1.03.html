@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+    <head>
+        <script type="text/javascript">
+
+            var cnabSpec = {
+                linhaTipoList: [
+                    { 
+                        id: "CAB_ARQ",
+                        nome: 'Cabeçalho de Arquivo',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '0'
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'CÓDIGO DO LOTE', descricao: '', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 9, fim: 17, }, classe: 'campo05', destaque: { color: '', border: ''} }
+,{ id: 5, nome: 'TIPO DE INSCRIÇÃO', descricao: 'TIPO DE INSCRIÇÃO  1=CPF e 2=CNPJ', descricaoDetalhada: '', posicional: { ini: 18, fim: 18, }, classe: 'campo06', destaque: { color: '#FFF5E8', border: ''} }
+,{ id: 6, nome: 'NÚMERO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 19, fim: 32, }, classe: 'campo07', destaque: { color: '#F8DCE6', border: ''} }
+,{ id: 7, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 33, fim: 47, }, classe: 'campo08', destaque: { color: '', border: ''} }
+,{ id: 8, nome: 'CONVÊNIO', descricao: '', descricaoDetalhada: '', posicional: { ini: 48, fim: 52, }, classe: 'campo09', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 9, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 53, fim: 53, }, classe: 'campo10', destaque: { color: '#FFEFF7', border: ''} }
+,{ id: 10, nome: 'AGENCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 54, fim: 57, }, classe: 'campo11', destaque: { color: '#E9FFEA', border: ''} }
+,{ id: 11, nome: 'DAC DA AGÊNCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 58, fim: 58, }, classe: 'campo12', destaque: { color: '#F7E7F9', border: ''} }
+,{ id: 12, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 59, fim: 65, }, classe: 'campo13', destaque: { color: '#FAD6E8', border: ''} }
+,{ id: 13, nome: 'CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 66, fim: 70, }, classe: 'campo14', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 14, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 71, fim: 71, }, classe: 'campo15', destaque: { color: '#FFF4D9', border: ''} }
+,{ id: 15, nome: 'DAC AG / CTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 72, fim: 72, }, classe: 'campo16', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 16, nome: 'NOME CLIENTE', descricao: '', descricaoDetalhada: '', posicional: { ini: 73, fim: 102, }, classe: 'campo17', destaque: { color: '#E6FFF2', border: ''} }
+,{ id: 17, nome: 'NOME BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 103, fim: 132, }, classe: 'campo18', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 18, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 133, fim: 142, }, classe: 'campo19', destaque: { color: '', border: ''} }
+,{ id: 19, nome: 'CÓDIGO RETORNO', descricao: '', descricaoDetalhada: '', posicional: { ini: 143, fim: 143, }, classe: 'campo20', destaque: { color: '#FFF2EA', border: ''} }
+,{ id: 20, nome: 'DATA DA GERAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 144, fim: 151, }, classe: 'campo21', destaque: { color: '#FDEEE0', border: ''} }
+,{ id: 21, nome: 'HORA DA GERAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 152, fim: 157, }, classe: 'campo22', destaque: { color: '#F8F0FF', border: ''} }
+,{ id: 22, nome: 'SEQUÊNCIA ARQUIVO', descricao: '', descricaoDetalhada: '', posicional: { ini: 158, fim: 163, }, classe: 'campo23', destaque: { color: '#F0FFF6', border: ''} }
+,{ id: 23, nome: 'LAYOUT', descricao: '', descricaoDetalhada: '', posicional: { ini: 164, fim: 166, }, classe: 'campo24', destaque: { color: '#F6F7D8', border: ''} }
+,{ id: 24, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 167, fim: 171, }, classe: 'campo25', destaque: { color: '', border: ''} }
+,{ id: 25, nome: 'RESERVADO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 172, fim: 191, }, classe: 'campo26', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 26, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 192, fim: 240, }, classe: 'campo27', destaque: { color: '', border: ''} }
+                       ]
+                    },
+                    { 
+                        id: "CAB_LOTE",
+                        nome: 'Cabeçalho de Lote',
+                        tamanho: 240,
+                        identificacao: [
+                            { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '1'
+                            },
+                            { 
+                                ini: 33,
+                                fim: 36,
+                                valor: '    '
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'SEQUENCIA INTERNO DO LOTE', descricao: 'Número Sequencia interno do Lote no Arquivo (era CODIGO LOTE)', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'TIPO DE OPERAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 9, fim: 9, }, classe: 'campo05', destaque: { color: '#F6F7D8', border: ''} }
+,{ id: 5, nome: 'TIPO DE SERVIÇO', descricao: '', descricaoDetalhada: '', posicional: { ini: 10, fim: 11, }, classe: 'campo06', destaque: { color: '#FFF0E1', border: ''} }
+,{ id: 6, nome: 'FORMA DE LANÇAMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 12, fim: 13, }, classe: 'campo07', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 7, nome: 'LAY-OUT', descricao: '', descricaoDetalhada: '', posicional: { ini: 14, fim: 16, }, classe: 'campo08', destaque: { color: '#EDFDE6', border: ''} }
+,{ id: 8, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 17, fim: 17, }, classe: 'campo09', destaque: { color: '', border: ''} }
+,{ id: 9, nome: 'TIPO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 18, fim: 18, }, classe: 'campo10', destaque: { color: '#FFF5E8', border: ''} }
+,{ id: 10, nome: 'NÚMERO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 19, fim: 32, }, classe: 'campo11', destaque: { color: '#F8DCE6', border: ''} }
+,{ id: 11, nome: 'TIPO DE CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 33, fim: 36, }, classe: 'campo12', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 12, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 37, fim: 47, }, classe: 'campo13', destaque: { color: '', border: ''} }
+,{ id: 13, nome: 'CONVÊNIO', descricao: '', descricaoDetalhada: '', posicional: { ini: 48, fim: 52, }, classe: 'campo14', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 14, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 53, fim: 53, }, classe: 'campo15', destaque: { color: '#FFEFF7', border: ''} }
+,{ id: 15, nome: 'AGENCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 54, fim: 57, }, classe: 'campo16', destaque: { color: '#E9FFEA', border: ''} }
+,{ id: 16, nome: 'DAC DA AGÊNCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 58, fim: 58, }, classe: 'campo17', destaque: { color: '#F7E7F9', border: ''} }
+,{ id: 17, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 59, fim: 65, }, classe: 'campo18', destaque: { color: '#FAD6E8', border: ''} }
+,{ id: 18, nome: 'CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 66, fim: 70, }, classe: 'campo19', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 19, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 71, fim: 71, }, classe: 'campo20', destaque: { color: '#FFF4D9', border: ''} }
+,{ id: 20, nome: 'DAC AG / CTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 72, fim: 72, }, classe: 'campo21', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 21, nome: 'NOME CLIENTE', descricao: '', descricaoDetalhada: '', posicional: { ini: 73, fim: 102, }, classe: 'campo22', destaque: { color: '#E6FFF2', border: ''} }
+,{ id: 22, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 103, fim: 142, }, classe: 'campo23', destaque: { color: '', border: ''} }
+,{ id: 23, nome: 'DATA INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 143, fim: 150, }, classe: 'campo24', destaque: { color: '#F4F7FF', border: ''} }
+,{ id: 24, nome: 'VALOR INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 151, fim: 168, }, classe: 'campo25', destaque: { color: '#FCEEE8', border: ''} }
+,{ id: 25, nome: 'SITUAÇÃO INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 169, fim: 169, }, classe: 'campo26', destaque: { color: '#FFF6F8', border: ''} }
+,{ id: 26, nome: 'STATUS INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 170, fim: 170, }, classe: 'campo27', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 27, nome: 'TIPO DE MOEDA', descricao: '', descricaoDetalhada: '', posicional: { ini: 171, fim: 173, }, classe: 'campo28', destaque: { color: '#DFF7FF', border: ''} }
+,{ id: 28, nome: 'SEQUENCIA EXTRATO', descricao: '', descricaoDetalhada: '', posicional: { ini: 174, fim: 178, }, classe: 'campo29', destaque: { color: '#FFF1F1', border: ''} }
+,{ id: 29, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 179, fim: 240, }, classe: 'campo30', destaque: { color: '', border: ''} }
+
+                        ]
+                    },
+                    { 
+                        id: "CAB_LOTE_APLIC_AUT",
+                        nome: 'Cabeçalho de Lote',
+                        tamanho: 240,
+                        identificacao: [
+                            { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '1'
+                            },
+                            { 
+                                ini: 33,
+                                fim: 36,
+                                valor: '0202'
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'SEQUENCIA INTERNO DO LOTE', descricao: 'Número Sequencia interno do Lote no Arquivo (era CODIGO LOTE)', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'TIPO DE OPERAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 9, fim: 9, }, classe: 'campo05', destaque: { color: '#F6F7D8', border: ''} }
+,{ id: 5, nome: 'TIPO DE SERVIÇO', descricao: '', descricaoDetalhada: '', posicional: { ini: 10, fim: 11, }, classe: 'campo06', destaque: { color: '#FFF0E1', border: ''} }
+,{ id: 6, nome: 'FORMA DE LANÇAMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 12, fim: 13, }, classe: 'campo07', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 7, nome: 'LAY-OUT', descricao: '', descricaoDetalhada: '', posicional: { ini: 14, fim: 16, }, classe: 'campo08', destaque: { color: '#EDFDE6', border: ''} }
+,{ id: 8, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 17, fim: 17, }, classe: 'campo09', destaque: { color: '', border: ''} }
+,{ id: 9, nome: 'TIPO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 18, fim: 18, }, classe: 'campo10', destaque: { color: '#FFF5E8', border: ''} }
+,{ id: 10, nome: 'NÚMERO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 19, fim: 32, }, classe: 'campo11', destaque: { color: '#F8DCE6', border: ''} }
+,{ id: 11, nome: 'TIPO DE CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 33, fim: 36, }, classe: 'campo12', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 12, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 37, fim: 47, }, classe: 'campo13', destaque: { color: '', border: ''} }
+,{ id: 13, nome: 'CONVÊNIO', descricao: '', descricaoDetalhada: '', posicional: { ini: 48, fim: 52, }, classe: 'campo14', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 14, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 53, fim: 53, }, classe: 'campo15', destaque: { color: '#FFEFF7', border: ''} }
+,{ id: 15, nome: 'AGENCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 54, fim: 57, }, classe: 'campo16', destaque: { color: '#E9FFEA', border: ''} }
+,{ id: 16, nome: 'DAC DA AGÊNCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 58, fim: 58, }, classe: 'campo17', destaque: { color: '#F7E7F9', border: ''} }
+,{ id: 17, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 59, fim: 65, }, classe: 'campo18', destaque: { color: '#FAD6E8', border: ''} }
+,{ id: 18, nome: 'CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 66, fim: 70, }, classe: 'campo19', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 19, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 71, fim: 71, }, classe: 'campo20', destaque: { color: '#FFF4D9', border: ''} }
+,{ id: 20, nome: 'DAC AG / CTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 72, fim: 72, }, classe: 'campo21', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 21, nome: 'NOME CLIENTE', descricao: '', descricaoDetalhada: '', posicional: { ini: 73, fim: 102, }, classe: 'campo22', destaque: { color: '#E6FFF2', border: ''} }
+,{ id: 22, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 103, fim: 142, }, classe: 'campo23', destaque: { color: '', border: ''} }
+,{ id: 23, nome: 'DATA INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 143, fim: 150, }, classe: 'campo24', destaque: { color: '#F4F7FF', border: ''} }
+,{ id: 24, nome: 'VALOR INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 151, fim: 168, }, classe: 'campo25', destaque: { color: '#FCEEE8', border: ''} }
+,{ id: 25, nome: 'SITUAÇÃO INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 169, fim: 169, }, classe: 'campo26', destaque: { color: '#FFF6F8', border: ''} }
+,{ id: 26, nome: 'STATUS INICIAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 170, fim: 170, }, classe: 'campo27', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 27, nome: 'TIPO DE MOEDA', descricao: '', descricaoDetalhada: '', posicional: { ini: 171, fim: 173, }, classe: 'campo28', destaque: { color: '#DFF7FF', border: ''} }
+,{ id: 28, nome: 'SEQUENCIA EXTRATO', descricao: '', descricaoDetalhada: '', posicional: { ini: 174, fim: 178, }, classe: 'campo29', destaque: { color: '#FFF1F1', border: ''} }
+,{ id: 29, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 179, fim: 240, }, classe: 'campo30', destaque: { color: '', border: ''} }
+
+                        ]
+                    }
+                    ,
+                    { 
+                        id: "SEGMENTO_E",
+                        nome: 'Segmento E',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '3'
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'SEQUENCIA INTERNO DO LOTE', descricao: 'Número Sequencia interno do Lote no Arquivo (era CODIGO LOTE)', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'SEQUENCIAL INTERNO DO REGISTRO', descricao: 'Numero sequencial interno ao lote do Registro (Era NÚMERO DO REGISTRO)', descricaoDetalhada: '', posicional: { ini: 9, fim: 13, }, classe: 'campo05', destaque: { color: '#EAE6FF', border: ''} }
+,{ id: 5, nome: 'SEGMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 14, fim: 14, }, classe: 'campo06', destaque: { color: '#FBEFD6', border: ''} }
+,{ id: 6, nome: 'LANÇAMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 15, fim: 15, }, classe: 'campo07', destaque: { color: '#FDEEF8', border: ''} }
+,{ id: 7, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 16, fim: 17, }, classe: 'campo08', destaque: { color: '', border: ''} }
+,{ id: 8, nome: 'TIPO DE INSCRIÇÃO', descricao: '1=CPF, 2=CNPJ', descricaoDetalhada: '', posicional: { ini: 18, fim: 18, }, classe: 'campo09', destaque: { color: '#FFF5E8', border: ''} }
+,{ id: 9, nome: 'NÚMERO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 19, fim: 32, }, classe: 'campo10', destaque: { color: '#F8DCE6', border: ''} }
+,{ id: 10, nome: 'CÓDIGO DE HISTÓRICO', descricao: '', descricaoDetalhada: '', posicional: { ini: 33, fim: 38, }, classe: 'campo11', destaque: { color: '#EDEBFF', border: ''} }
+,{ id: 11, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 39, fim: 47, }, classe: 'campo12', destaque: { color: '', border: ''} }
+,{ id: 12, nome: 'CONVÊNIO', descricao: '', descricaoDetalhada: '', posicional: { ini: 48, fim: 52, }, classe: 'campo13', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 13, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 53, fim: 53, }, classe: 'campo14', destaque: { color: '#FFEFF7', border: ''} }
+,{ id: 14, nome: 'AGENCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 54, fim: 57, }, classe: 'campo15', destaque: { color: '#E9FFEA', border: ''} }
+,{ id: 15, nome: 'DAC DA AGÊNCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 58, fim: 58, }, classe: 'campo16', destaque: { color: '#F7E7F9', border: ''} }
+,{ id: 16, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 59, fim: 65, }, classe: 'campo17', destaque: { color: '#FAD6E8', border: ''} }
+,{ id: 17, nome: 'CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 66, fim: 70, }, classe: 'campo18', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 18, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 71, fim: 71, }, classe: 'campo19', destaque: { color: '#FFF4D9', border: ''} }
+,{ id: 19, nome: 'DAC AG / CTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 72, fim: 72, }, classe: 'campo20', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 20, nome: 'NOME CLIENTE', descricao: '', descricaoDetalhada: '', posicional: { ini: 73, fim: 102, }, classe: 'campo21', destaque: { color: '#E6FFF2', border: ''} }
+,{ id: 21, nome: 'RESERVADO', descricao: '', descricaoDetalhada: '', posicional: { ini: 103, fim: 108, }, classe: 'campo22', destaque: { color: '', border: ''} }
+,{ id: 22, nome: 'NATUREZA', descricao: '', descricaoDetalhada: '', posicional: { ini: 109, fim: 111, }, classe: 'campo23', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 23, nome: 'TIPO COMPLEMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 112, fim: 113, }, classe: 'campo24', destaque: { color: '#FFF2EA', border: ''} }
+,{ id: 24, nome: 'BANCO ORIGEM', descricao: '', descricaoDetalhada: '', posicional: { ini: 114, fim: 116, }, classe: 'campo25', destaque: { color: '#FDEEE0', border: ''} }
+,{ id: 25, nome: 'AGENCIA ORIGEM', descricao: '', descricaoDetalhada: '', posicional: { ini: 117, fim: 121, }, classe: 'campo26', destaque: { color: '#F8F0FF', border: ''} }
+,{ id: 26, nome: 'AG/CTA ORIGEM', descricao: '', descricaoDetalhada: '', posicional: { ini: 122, fim: 133, }, classe: 'campo27', destaque: { color: '#F0FFF6', border: ''} }
+,{ id: 27, nome: 'CPMF', descricao: '', descricaoDetalhada: '', posicional: { ini: 134, fim: 134, }, classe: 'campo28', destaque: { color: '#F6F7D8', border: ''} }
+,{ id: 28, nome: 'DATA CONTÁBIL', descricao: '', descricaoDetalhada: '', posicional: { ini: 135, fim: 142, }, classe: 'campo29', destaque: { color: '#FFF0E1', border: ''} }
+,{ id: 29, nome: 'DATA DO LANÇAMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 143, fim: 150, }, classe: 'campo30', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 30, nome: 'VALOR', descricao: '', descricaoDetalhada: '', posicional: { ini: 151, fim: 168, }, classe: 'campo31', destaque: { color: '#E3E8FF', border: ''} }
+,{ id: 31, nome: 'TIPO LANÇAMENTO', descricao: 'Crédito ou Débito (Era TIPO LANÇAMENTO)', descricaoDetalhada: '', posicional: { ini: 169, fim: 169, }, classe: 'campo32', destaque: { color: '#F7EAFB', border: ''} }
+,{ id: 32, nome: 'CATEGORIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 170, fim: 172, }, classe: 'campo33', destaque: { color: '#EDEBFF', border: ''} }
+,{ id: 33, nome: 'CÓDIGO LANÇAMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 173, fim: 176, }, classe: 'campo34', destaque: { color: '#F0FFF6', border: ''} }
+,{ id: 34, nome: 'HISTÓRICO', descricao: 'Descrição do lançamento', descricaoDetalhada: '', posicional: { ini: 177, fim: 201, }, classe: 'campo35', destaque: { color: '#FCEEEB', border: ''} }
+,{ id: 35, nome: 'AGÊNCIA DE ORIGEM', descricao: '', descricaoDetalhada: '', posicional: { ini: 202, fim: 205, }, classe: 'campo36', destaque: { color: '#FCEEE8', border: ''} }
+,{ id: 36, nome: 'COMPLEMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 206, fim: 207, }, classe: 'campo37', destaque: { color: '#FFF6F8', border: ''} }
+,{ id: 37, nome: 'CONTA DE ORIGEM', descricao: '', descricaoDetalhada: '', posicional: { ini: 208, fim: 212, }, classe: 'campo38', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 38, nome: 'DAC AG/CTA DE ORIGEM', descricao: '', descricaoDetalhada: '', posicional: { ini: 213, fim: 213, }, classe: 'campo39', destaque: { color: '#DFF7FF', border: ''} }
+,{ id: 39, nome: 'TIPO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 214, fim: 214, }, classe: 'campo40', destaque: { color: '#FFF9FB', border: ''} }
+,{ id: 40, nome: 'NÚMERO INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 215, fim: 228, }, classe: 'campo41', destaque: { color: '#DDEBFF', border: ''} }
+,{ id: 41, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 229, fim: 234, }, classe: 'campo42', destaque: { color: '', border: ''} }
+,{ id: 42, nome: 'NÚMERO DOCUMENTO', descricao: '', descricaoDetalhada: '', posicional: { ini: 235, fim: 240, }, classe: 'campo43', destaque: { color: '#FFF0E1', border: ''} }
+
+                        ]
+                    },
+                    { 
+                        id: "ROD_LOTE",
+                        nome: 'Rodapé de Lote',
+                        tamanho: 240,
+                        identificacao: [
+                            { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '5'
+                            },
+                            {
+                                bloco: 'BLOCO_LOTE'
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'SEQUENCIA INTERNO DO LOTE', descricao: 'Número Sequencia interno do Lote no Arquivo (era CODIGO LOTE)', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 9, fim: 17, }, classe: 'campo05', destaque: { color: '', border: ''} }
+,{ id: 5, nome: 'TIPO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 18, fim: 18, }, classe: 'campo06', destaque: { color: '#FFF5E8', border: ''} }
+,{ id: 6, nome: 'NÚMERO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 19, fim: 32, }, classe: 'campo07', destaque: { color: '#F8DCE6', border: ''} }
+,{ id: 7, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 33, fim: 47, }, classe: 'campo08', destaque: { color: '', border: ''} }
+,{ id: 8, nome: 'CONVÊNIO', descricao: '', descricaoDetalhada: '', posicional: { ini: 48, fim: 52, }, classe: 'campo09', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 9, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 53, fim: 53, }, classe: 'campo10', destaque: { color: '#FFEFF7', border: ''} }
+,{ id: 10, nome: 'AGENCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 54, fim: 57, }, classe: 'campo11', destaque: { color: '#E9FFEA', border: ''} }
+,{ id: 11, nome: 'DAC DA AGÊNCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 58, fim: 58, }, classe: 'campo12', destaque: { color: '#F7E7F9', border: ''} }
+,{ id: 12, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 59, fim: 65, }, classe: 'campo13', destaque: { color: '#FAD6E8', border: ''} }
+,{ id: 13, nome: 'CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 66, fim: 70, }, classe: 'campo14', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 14, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 71, fim: 71, }, classe: 'campo15', destaque: { color: '#FFF4D9', border: ''} }
+,{ id: 15, nome: 'DAC AG / CTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 72, fim: 72, }, classe: 'campo16', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 16, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 73, fim: 88, }, classe: 'campo17', destaque: { color: '', border: ''} }
+,{ id: 17, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 89, fim: 142, }, classe: 'campo18', destaque: { color: '', border: ''} }
+,{ id: 18, nome: 'DATA FINAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 143, fim: 150, }, classe: 'campo19', destaque: { color: '#EAE6FF', border: ''} }
+,{ id: 19, nome: 'SALDO FINAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 151, fim: 168, }, classe: 'campo20', destaque: { color: '#FBEFD6', border: ''} }
+,{ id: 20, nome: 'SITUAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 169, fim: 169, }, classe: 'campo21', destaque: { color: '#FDEEF8', border: ''} }
+,{ id: 21, nome: 'STATUS', descricao: '', descricaoDetalhada: '', posicional: { ini: 170, fim: 170, }, classe: 'campo22', destaque: { color: '#F8F0FF', border: ''} }
+,{ id: 22, nome: 'TOTAL QTDE REGISTROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 171, fim: 176, }, classe: 'campo23', destaque: { color: '#FFECEC', border: ''} }
+,{ id: 23, nome: 'TOTAL VALOR DÉBITO', descricao: '', descricaoDetalhada: '', posicional: { ini: 177, fim: 194, }, classe: 'campo24', destaque: { color: '#F4F7FF', border: ''} }
+,{ id: 24, nome: 'TOTAL VALOR CRÉDITO', descricao: '', descricaoDetalhada: '', posicional: { ini: 195, fim: 212, }, classe: 'campo25', destaque: { color: '#F2E8FF', border: ''} }
+,{ id: 25, nome: 'TOTAL VALORES NÃO CONTÁBEIS ', descricao: '', descricaoDetalhada: '', posicional: { ini: 213, fim: 230, }, classe: 'campo26', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 26, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 231, fim: 240, }, classe: 'campo27', destaque: { color: '', border: ''} }
+
+                        ]
+                    },
+                    { 
+                        id: "ROD_LOTE_APLIC_AUT",
+                        nome: 'Rodapé de Lote',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '5'
+                            },
+                            {
+                                bloco: 'BLOCO_LOTE_APLIC_AUT'
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO APLIC AUT', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'SEQUENCIA INTERNO DO LOTE', descricao: 'Número Sequencia interno do Lote no Arquivo (era CODIGO LOTE)', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 9, fim: 17, }, classe: 'campo05', destaque: { color: '', border: ''} }
+,{ id: 5, nome: 'TIPO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 18, fim: 18, }, classe: 'campo06', destaque: { color: '#FFF5E8', border: ''} }
+,{ id: 6, nome: 'NÚMERO DE INSCRIÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 19, fim: 32, }, classe: 'campo07', destaque: { color: '#F8DCE6', border: ''} }
+,{ id: 7, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 33, fim: 47, }, classe: 'campo08', destaque: { color: '', border: ''} }
+,{ id: 8, nome: 'CONVÊNIO', descricao: '', descricaoDetalhada: '', posicional: { ini: 48, fim: 52, }, classe: 'campo09', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 9, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 53, fim: 53, }, classe: 'campo10', destaque: { color: '#FFEFF7', border: ''} }
+,{ id: 10, nome: 'AGENCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 54, fim: 57, }, classe: 'campo11', destaque: { color: '#E9FFEA', border: ''} }
+,{ id: 11, nome: 'DAC DA AGÊNCIA', descricao: '', descricaoDetalhada: '', posicional: { ini: 58, fim: 58, }, classe: 'campo12', destaque: { color: '#F7E7F9', border: ''} }
+,{ id: 12, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 59, fim: 65, }, classe: 'campo13', destaque: { color: '#FAD6E8', border: ''} }
+,{ id: 13, nome: 'CONTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 66, fim: 70, }, classe: 'campo14', destaque: { color: '#E6FFF7', border: ''} }
+,{ id: 14, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 71, fim: 71, }, classe: 'campo15', destaque: { color: '#FFF4D9', border: ''} }
+,{ id: 15, nome: 'DAC AG / CTA', descricao: '', descricaoDetalhada: '', posicional: { ini: 72, fim: 72, }, classe: 'campo16', destaque: { color: '#F2FFF3', border: ''} }
+,{ id: 16, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 73, fim: 88, }, classe: 'campo17', destaque: { color: '', border: ''} }
+,{ id: 17, nome: 'ZEROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 89, fim: 142, }, classe: 'campo18', destaque: { color: '', border: ''} }
+,{ id: 18, nome: 'DATA FINAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 143, fim: 150, }, classe: 'campo19', destaque: { color: '#EAE6FF', border: ''} }
+,{ id: 19, nome: 'SALDO FINAL', descricao: '', descricaoDetalhada: '', posicional: { ini: 151, fim: 168, }, classe: 'campo20', destaque: { color: '#FBEFD6', border: ''} }
+,{ id: 20, nome: 'SITUAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 169, fim: 169, }, classe: 'campo21', destaque: { color: '#FDEEF8', border: ''} }
+,{ id: 21, nome: 'STATUS', descricao: '', descricaoDetalhada: '', posicional: { ini: 170, fim: 170, }, classe: 'campo22', destaque: { color: '#F8F0FF', border: ''} }
+,{ id: 22, nome: 'TOTAL QTDE REGISTROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 171, fim: 176, }, classe: 'campo23', destaque: { color: '#FFECEC', border: ''} }
+,{ id: 23, nome: 'TOTAL VALOR DÉBITO', descricao: '', descricaoDetalhada: '', posicional: { ini: 177, fim: 194, }, classe: 'campo24', destaque: { color: '#F4F7FF', border: ''} }
+,{ id: 24, nome: 'TOTAL VALOR CRÉDITO', descricao: '', descricaoDetalhada: '', posicional: { ini: 195, fim: 212, }, classe: 'campo25', destaque: { color: '#F2E8FF', border: ''} }
+,{ id: 25, nome: 'TOTAL VALORES NÃO CONTÁBEIS ', descricao: '', descricaoDetalhada: '', posicional: { ini: 213, fim: 230, }, classe: 'campo26', destaque: { color: '#E6F6FF', border: ''} }
+,{ id: 26, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 231, fim: 240, }, classe: 'campo27', destaque: { color: '', border: ''} }
+
+                        ]
+                    },
+
+
+                    { 
+                        id: "ROD_ARQ",
+                        nome: 'Rodapé de Arquivo',
+                        tamanho: 240,
+                        identificacao: [
+                             { 
+                                ini: 8,
+                                fim: 8,
+                                valor: '9'
+                            }
+                        ],
+                        campoList: [
+ { id: 1, nome: 'CÓDIGO DO BANCO', descricao: '', descricaoDetalhada: '', posicional: { ini: 1, fim: 3, }, classe: 'campo02', destaque: { color: '#EAFDF0', border: ''} }
+,{ id: 2, nome: 'CÓDIGO DO LOTE', descricao: '', descricaoDetalhada: '', posicional: { ini: 4, fim: 7, }, classe: 'campo03', destaque: { color: '#FFF0C9', border: ''} }
+,{ id: 3, nome: 'TIPO DE REGISTRO', descricao: '', descricaoDetalhada: '', posicional: { ini: 8, fim: 8, }, classe: 'campo04', destaque: { color: '#E7FDFF', border: ''} }
+,{ id: 4, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 9, fim: 17, }, classe: 'campo05', destaque: { color: '', border: ''} }
+,{ id: 5, nome: 'TOTAL QTDE DE LOTES', descricao: '', descricaoDetalhada: '', posicional: { ini: 18, fim: 23, }, classe: 'campo06', destaque: { color: '#FCEEEB', border: ''} }
+,{ id: 6, nome: 'TOTAL QTDE REGISTROS', descricao: '', descricaoDetalhada: '', posicional: { ini: 24, fim: 29, }, classe: 'campo07', destaque: { color: '#FCEEE8', border: ''} }
+,{ id: 7, nome: 'QUANT CONTAS CONCILIAÇÃO', descricao: '', descricaoDetalhada: '', posicional: { ini: 30, fim: 35, }, classe: 'campo08', destaque: { color: '#FFF6F8', border: ''} }
+,{ id: 8, nome: 'BRANCOS', descricao: '', descricaoDetalhada: '', posicional: { ini: 36, fim: 240, }, classe: 'campo09', destaque: { color: '', border: ''} }
+                        ]
+                    }
+                ],
+
+                blocoTipoList: [
+                    {
+                        id: "BLOCO_LOTE",
+                        nome: 'Bloco de Conta Corrente',
+                        idLinhaIni: "CAB_LOTE",
+                        idLinhaFim: "ROD_LOTE",
+                        destaque: {
+                            border: "1px solid darkgreen",
+                        }
+                    },
+                    {
+                        id: "BLOCO_LOTE_APLIC_AUT",
+                        nome: 'Bloco Lote de AplicAut',
+                        idLinhaIni: "CAB_LOTE_APLIC_AUT",
+                        idLinhaFim: "ROD_LOTE_APLIC_AUT",
+                        destaque: {
+                            border: "2px solid pink",
+                        }
+                    }
+                ]
+            }
+
+            function parseCNAB() {
+                console.log("Processando CNAB ...")
+                
+                // var cnabInput = document.getElementById("cnabInput");
+                // montagem(cnabInput.value);
+
+                var inputDiv = document.getElementById("input");
+                inputDiv.hidden = true;
+                var outputDiv = document.getElementById("output");
+                outputDiv.hidden = false;
+                
+                var cnabInput = document.getElementById("invisible-testeArea");
+                montagem(cnabInput.innerText);
+            }
+
+            function montagem(textoCnab) {
+                var outputDivElm = document.getElementById("output");
+                var lines = textoCnab.split('\n');
+
+                var blocoSpec = null;
+                var blocoInit = false;
+                var blocoElm = null;
+
+                for (var i = 0; i < lines.length; i++) {
+                    var tamLinha = 240;
+                    lines[i] = lines[i].replace(/\r/g, ''); // remove carriage return if present
+                    if (lines[i].trim() === '') {
+                        continue; // skip empty lines
+                    }
+
+                    var divElm = document.createElement('div');
+                    divElm.className = 'cnabLine';
+                    
+                    if( lines[i].length < tamLinha) {
+                        lines[i] = lines[i].padEnd(tamLinha, ' ');
+                    }
+
+                    var line = lines[i];
+
+                    // Indetificar Linha
+                    var linhaTipo = getLinhaTipo(line, blocoSpec);
+                    if (linhaTipo != null) {
+                        divElm.className = divElm.className + ' ' + linhaTipo.id;
+
+                        // Iterar campos
+                        var indexFim = 0;
+                        for(var campoIndex in linhaTipo.campoList){
+                            var campo = linhaTipo.campoList[campoIndex];
+                            
+                            var valorCampo = getValorCampo(line, campo.posicional)
+                            var spanCampo = document.createElement('span');
+                            spanCampo.className = campo.classe;
+                            spanCampo.innerText = valorCampo;
+                            
+                            // def string de destaque e Dica
+                            spanCampo.style = getStringDestaque(campo.destaque);
+                            spanCampo.title = getDicaCampo(campo);
+                            
+                            divElm.appendChild(spanCampo);
+
+                            indexFim = campo.posicional.fim;
+                        }
+                        // Restante
+                        if (indexFim < tamLinha) {
+                            var spanCampo = document.createElement('span');
+                            spanCampo.className = "restante";
+                            spanCampo.innerText = line.substring(indexFim, tamLinha);
+                            divElm.appendChild(spanCampo);
+                        }
+                    }
+                    else {
+                        console.log('Tipo de linha não identificado: ' + line);
+                        var spanCompleto = document.createElement('span');
+                        spanCompleto.className = 'semIdentificacao';
+                        spanCompleto.textContent = line;
+                        divElm.appendChild(spanCompleto);
+                    }
+
+                    var elmAppender = outputDivElm;
+                    
+                    if(blocoInit) {
+                        // verificar se tem que FECHAR
+                        if(linhaTipo && blocoSpec.idLinhaFim == linhaTipo.id) {
+                            console.log("Fechando bloco!");
+                            blocoInit = false;
+                            blocoSpec = null;
+                        }
+                        elmAppender = blocoElm;
+                    }
+                    else
+                    {
+                        // Encontrar uma especificacao de Bloco baseado na linha atual identificada
+                        for(var indexBloco in cnabSpec.blocoTipoList) {
+                            var blocoToTest = cnabSpec.blocoTipoList[indexBloco];
+                            if(blocoToTest.idLinhaIni == linhaTipo.id)
+                            {
+                                blocoSpec = blocoToTest;
+                                break;
+                            }
+                        }
+
+                        // verificar se tem que abrir
+                        if(blocoSpec && linhaTipo && blocoSpec.idLinhaIni == linhaTipo.id) {
+                            console.log(`Abrindo bloco ${blocoSpec} ...`);
+                            blocoInit = true;
+
+                            var blockDivElm = document.createElement('div');
+                            blockDivElm.className = 'cnabBloco';
+                            blockDivElm.style = getStringDestaque(blocoSpec.destaque)
+                            blocoElm = blockDivElm;
+                            outputDivElm.appendChild(blockDivElm)
+                            elmAppender = blocoElm;
+                        }
+                    }
+                    
+                    elmAppender.appendChild(divElm);
+                }
+            }
+
+            function getLinhaTipo(linha, blocoSpec) {
+                for (var i = 0; i < cnabSpec.linhaTipoList.length; i++) {
+                    var linhaTipo = cnabSpec.linhaTipoList[i];
+                    var match = true;
+
+                    for (var j = 0; j < linhaTipo.identificacao.length; j++) {
+                        var criterio = linhaTipo.identificacao[j];
+
+                        if(criterio.ini)
+                        {
+                            var valorCampoCriterio = getValorCampo(linha, criterio);
+                            var resultTesteCriterio = valorCampoCriterio == criterio.valor;
+                            match = match && resultTesteCriterio;
+                        }
+                        else if (criterio.bloco && blocoSpec)
+                        {
+                            var resultTesteCriterio = criterio.bloco == blocoSpec.id;
+                            match = match && resultTesteCriterio;
+                        }
+                        else
+                        {
+                            match = false;
+                        }
+                    }
+                    if (match) {
+                        return linhaTipo;
+                    }
+                }
+                return null;
+            }
+
+            function getValorCampo(linha, identificacao) {
+                return linha.substring(identificacao.ini - 1, identificacao.fim);
+            }
+
+            function getDicaCampo(campo) {
+                if (campo.descricaoDetalhada) {
+                    return campo.descricaoDetalhada;
+                }
+                if (campo.descricao) {
+                    return campo.descricao;
+                }
+                return campo.nome;
+            }
+       
+            function getStringDestaque(destaque) {
+                if(destaque) {
+                    var stringStyle = "";
+                    if(destaque.color)
+                    {
+                        stringStyle += `background-color: ${destaque.color};`;
+                    }
+                    if(destaque.border)
+                    {
+                        stringStyle += `border: ${destaque.border};`;
+                    }
+                    return stringStyle;
+                }
+                return "";
+            }
+        </script>
+        <style type="text/css"> 
+            .cabecalho {
+                text-align: center;
+            }
+
+            #output {
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 7px;
+
+                font-family: Consolas, 'Liberation Mono', monospace;
+                width: fit-content;
+            
+                span:hover {
+                    font-weight: bold;
+                }
+            }
+
+            .cnabLine {
+                display: block;
+                white-space: pre;
+            }
+        </style>
+
+    </head>
+    <body onload="parseCNAB()"> 
+        <div id="main" class="cabecalho">
+            <h1>Visualizador de CNAB</h1>
+        </div>
+
+        <div id="input" class="start">
+            <label for="cnab">Insira o CNAB no textArea abaixo</label><br />
+            <textarea id="cnabInput" rows="20" cols="80"></textarea><br />
+            <button onclick="javascript:parseCNAB()">OK</button>
+        </div>
+
+        <div id="output" class="start" hidden="hidden">
+        </div>
+
+        <div id="invisible-testeArea" hidden="hidden">34100000         250460799000177               52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ BANCO ITAU S/A                          22403201705425400010805000000                                                                     
+34100011E0440031 250460799000177               52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ                                         22032017000000000007041193CPBRL00108                                                              
+3410001300001E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100005939000000000000S        22032017000000000000251600D1190033DEV CH DEP 341 000021 49                                  000021
+3410001300002E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100005939000000000000S        22032017000000000000021181D1190033DEV CH DEP 341 000164 49                                  000164
+3410001300003E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100005939000000000000S        22032017000000000000008721D1190033DEV CH DEP 341 002520 49                                  002520
+3410001300004E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       SSR0100005939000000000000S        23032017000000000000140000D1010003CH COMPENSADO 237 036499                                  036499
+3410001300005E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       SSR0100005939000000000000S        23032017000000000000228732D1010003CH COMPENSADO 237 036505                                  036505
+3410001300006E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100001529000000000000S        23032017000000000001004427D1040071SISPAG TRIBUTOS                                           000000
+3410001300007E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100005939482400015004S        23032017000000000000037310D1010004CH COMPENSADO 341 036509                                  036509
+3410001300008E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV                      S        23032017000000000000001146D1050074TAR/CUSTAS COBRANCA                                       000000
+3410001300009E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       CDS0100000250000000000000S        23032017000000000002234856C2010018INT     0488503 DEP CHQ                                   000008
+3410001300010E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       SSR0100000250000000000000S        23032017000000000002717255C2010018INT     0488503 DEP CHQ                                   000014
+3410001300011E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100004824000000000000S        23032017000000000002093070C2050098SISPAG  CONTABILEX ASS L                                  000000
+3410001300012E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100003100000000000000S        23032017000000000003876988C2050098SISPAG  GSA INV P LTDA                                    000000
+3410001300013E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100004175379700246448S        23032017000000000000300000C2130063TBI 3797.24644-8ITBI                                      000000
+3410001300014E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       SSR  000     334500240130S        23032017000000000000045761C2090011DOC 033.4524ZAITTER A AS                                  000000
+3410001300015E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       SSR  000     373200190000S        23032017000000000000009194C2090011DOC 237.3219LEONARDO H R                                  000000
+3410001300016E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  00101897000000139583S        23032017000000000000090519C2090007TED 001.1897CIA DES H                                     000000
+3410001300017E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  00106958000000014101S        23032017000000000000449316C2090007TED 001.6958CICERO SOARE                                  000000
+3410001300018E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  00108642000000263472S        23032017000000000000380000C2090007TED 001.8642PAULO E S GO                                  000000
+3410001300019E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  03304413000010319844S        23032017000000000000200000C2090007TED 033.4413THAIS A S RO                                  000000
+3410001300020E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  23702568000000385000S        23032017000000000000144915C2090007TED 237.2568INVOICE SERV                                  000000
+3410001300021E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  23703133000000069930S        23032017000000000003400000C2090007TED 237.31331 OFIC REG I                                  000000
+3410001300022E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV0100001529000000000000S        23032017000000000000006889C2020038MOV TIT COB DISP  23/03S                                  000000
+3410001300023E2  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       SSR0100001529000000000000S        23032017000000000000035065C2020038MOV TIT COBRANCA  23/03S                                  000000
+34100015         250460799000177               52136015297000000053610 2                00000000000000000000000000000000000000000000000000000023032017000000000021331904CP0000250000000000016931170000000000159838280000000000000000000000000000
+34100021E0440031 2504607990001770202           52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ                                         22032017000000000007041193CPBRL00108                                                              
+3410002300020E1  250460799000177000000         52136015297000000053610 21 O REG IMOV TITS DOCS CIV PJ       DPV  23702568000000385000S        23032017000000000000144915C2090007TED 237.2568INVOICE SERV                                  000000
+34100025         250460799000177               52136015297000000053610 2                00000000000000000000000000000000000000000000000000000023032017000000000021331904CP0000250000000000016931170000000000159838280000000000000000000000000000
+34199999         000001000027000001                                                                                                                                                                                                             
+</div>
+
+    </body>
+
+
+
+
+
+</html>
